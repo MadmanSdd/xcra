@@ -1,2 +1,2 @@
 # xcra
-<p>Projeto feito para estudo pentest</p>
+<p>Projeto feito com conhecimentos adquiridos no curso Desec Security</p>
