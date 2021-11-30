@@ -79,7 +79,8 @@ public class Main {
 						
 						int convertPort = Integer.parseInt(portas_Array[porta]);
 						if (ScanPort.ScanPortasAbertas(ip_label, convertPort, 200)) {
-							model.addElement("IP: " + ip_label + " Porta: " + convertPort + " Aberta");
+							String resolve_ip = ScanPort.resolverNomeToIp(ip_label.replaceAll("/", "").replace(":","").replaceAll("http", ""));
+							model.addElement("IP: " + resolve_ip + " Porta: " + convertPort + " Aberta");
 							list_Result.setModel(model);
 							try {
 								Thread.currentThread().sleep(1000);
@@ -127,7 +128,7 @@ public class Main {
 		frmXcrad.getContentPane().add(list_Result);
 		
 		JLabel lblExemplo = new JLabel("Exemplo");
-		lblExemplo.setBounds(10, 262, 46, 14);
+		lblExemplo.setBounds(10, 262, 67, 14);
 		frmXcrad.getContentPane().add(lblExemplo);
 	}
 }
